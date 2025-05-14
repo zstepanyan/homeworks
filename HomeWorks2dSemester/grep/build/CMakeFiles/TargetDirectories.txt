@@ -1,0 +1,3 @@
+/home/narr/Desktop/IpHomeWork/grep/build/CMakeFiles/mygrep.dir
+/home/narr/Desktop/IpHomeWork/grep/build/CMakeFiles/edit_cache.dir
+/home/narr/Desktop/IpHomeWork/grep/build/CMakeFiles/rebuild_cache.dir

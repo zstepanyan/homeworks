@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/main.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/main.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/main.cpp",
+  "output": "CMakeFiles/mygrep.dir/main.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/arg_parser.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/arg_parser.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/arg_parser.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/arg_parser.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/file_reader.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/file_reader.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/file_reader.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/file_reader.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/matcher.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/matcher.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/matcher.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/matcher.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/line_processor.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/line_processor.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/line_processor.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/line_processor.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/output.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/output.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/output.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/output.cpp.o"
+},
+{
+  "directory": "/home/narr/Desktop/IpHomeWork/grep/build",
+  "command": "/usr/bin/g++  -I/home/narr/Desktop/IpHomeWork/grep/include -g -std=c++17 -o CMakeFiles/mygrep.dir/src/grep_error.cpp.o -c /home/narr/Desktop/IpHomeWork/grep/src/grep_error.cpp",
+  "file": "/home/narr/Desktop/IpHomeWork/grep/src/grep_error.cpp",
+  "output": "CMakeFiles/mygrep.dir/src/grep_error.cpp.o"
+}
+]

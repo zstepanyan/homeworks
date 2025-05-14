@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/mygrep.dir/main.cpp.o CMakeFiles/mygrep.dir/src/arg_parser.cpp.o CMakeFiles/mygrep.dir/src/file_reader.cpp.o CMakeFiles/mygrep.dir/src/matcher.cpp.o CMakeFiles/mygrep.dir/src/line_processor.cpp.o CMakeFiles/mygrep.dir/src/output.cpp.o CMakeFiles/mygrep.dir/src/grep_error.cpp.o -o mygrep 
