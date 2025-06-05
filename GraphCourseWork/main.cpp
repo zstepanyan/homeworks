@@ -1,19 +1,24 @@
 #include "Graph.hpp"
 #include <iostream>
 #include <string>
-#include <vector>
 #include <fstream>
-#include <cstdlib>
 #include <algorithm>
+#include <cstdlib>
 
-void print_adjacency_matrix(const std::vector<std::vector<int>>& matrix) {
-    std::cout << "\nAdjacency Matrix:\n";
-    for (const auto& row : matrix) {
-        for (int val : row) {
-            std::cout << val << " ";
-        }
-        std::cout << "\n";
+void writeDOT(const std::vector<Graph::WeightedEdge>& edges, const std::string& filename) {
+    std::ofstream out(filename);
+    if (!out.is_open()) {
+        std::cerr << "Error: Could not open " << filename << " for writing.\n";
+        return;
     }
+
+    out << "graph G {\n";
+    for (const auto& [u, v, w] : edges) {
+        out << "    " << u << " -- " << v << " [label=" << w << "];\n";
+    }
+
+    out << "}\n";
+    out.close();
 }
 
 std::string get_file_extension(const std::string& filename) {
@@ -25,14 +30,6 @@ std::string get_file_extension(const std::string& filename) {
 }
 
 int main() {
-    std::string choice;
-    std::cout << "Enter 1 to exit or any other key to continue: ";
-    std::getline(std::cin, choice);
-    if (choice == "1") {
-        std::cout << "Exiting program.\n";
-        return 0;
-    }
-
     std::string file_path;
     std::cout << "Enter the input file name (e.g., graph.txt or graph.json): ";
     std::getline(std::cin, file_path);
@@ -48,24 +45,18 @@ int main() {
     }
 
     const std::string dot_output = "output.dot";
+    const std::string mst_dot_output = "mst.dot";
 
     try {
         bool is_json = (ext == "json");
         Graph g(file_path, is_json);
-        std::cout << "\nGraph loaded successfully.\n";
-
-        std::cout << "Number of vertices: " << g.get_vertex_count() << "\n";
-        std::cout << "Number of edges: " << g.get_edge_count() << "\n";
-        std::cout << "Is graph connected? " << (g.is_connected() ? "Yes" : "No") << "\n";
-
-        print_adjacency_matrix(g.get_adjacency_matrix());
 
         g.export_to_dot(dot_output);
 
-        std::cout << "\nDOT file written to: " << dot_output << "\n";
+        std::vector<Graph::WeightedEdge> mst_edges = g.minimum_spanning_tree();
+        writeDOT(mst_edges, mst_dot_output);
 
-        // Draw only the final tree (e.g., MST)
-        std::string render_command = "python3 graph.py \"" + dot_output + "\"";
+        std::string render_command = "python3 visualizer.py \"" + dot_output + "\" \"" + mst_dot_output + "\"";
         std::system(render_command.c_str());
 
     } catch (const std::exception& e) {
