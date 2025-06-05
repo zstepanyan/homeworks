@@ -13,11 +13,8 @@ public:
     };
 
     Graph();
-    explicit Graph(const std::string& file_path, bool is_json = false);
+    explicit Graph(const std::string& file_path, bool is_json = false); 
     Graph(const std::vector<std::tuple<int, int, int>>& edges);
-    Graph(const std::vector<std::pair<int, int>>& edges); // Unweighted
-    Graph(const std::vector<std::vector<int>>& adj_matrix); // Unweighted
-    Graph(const std::vector<std::vector<int>>& weight_matrix, bool is_weighted); // Weighted
 
     Graph(const Graph& other) = default;
     Graph(Graph&& other) noexcept = default;
@@ -26,13 +23,7 @@ public:
     ~Graph() = default;
 
     void add_edge(int u, int v, int weight = 1);
-    void clear();
-
     std::vector<WeightedEdge> minimum_spanning_tree() const;
-    std::vector<std::vector<int>> get_adjacency_matrix() const;
-    size_t get_vertex_count() const;
-    size_t get_edge_count() const;
-    bool is_connected() const;
     void export_to_dot(const std::string& filename) const;
 
 private:
